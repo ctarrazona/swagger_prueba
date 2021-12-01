@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a looks' server",
+    "version": "1.0.0",
+    "title": "Looks"
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/ctarrazona/Looks/1.0.0",
+  "tags": [
+    {
+      "name": "looks",
+      "description": "All about looks"
+    },
+    {
+      "name": "tags",
+      "description": "All about tags"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/Look/GetLookListing": {
+      "get": {
+        "tags": [
+          "looks"
+        ],
+        "summary": "Retrieve list of looks",
+        "operationId": "getLooks",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "shop",
+            "in": "query",
+            "description": "ISO-code to indicate language and shop IDs",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of looks",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LookList"
+              }
+            }
+          },
+          "404": {
+            "description": "No looks finded"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "LookList": {
+      "type": "object",
+      "properties": {
+        "idLook": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image_url_1": {
+          "type": "string"
+        },
+        "image_url_2": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "aux": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
