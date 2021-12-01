@@ -47,7 +47,7 @@
           "200": {
             "description": "List of looks",
             "schema": {
-              "type": "array",
+              "type": "object",
               "items": {
                 "$ref": "#/definitions/LookList"
               }
