@@ -25,4 +25,8 @@ jobs:
           publish_dir: swagger-ui
       - name: File Diff
         uses: tianhaoz95-actions/file-diff@v1.0.0
+        with: 
+          lhs: './api/swagger/asd.yaml'
+          rhs: './api/swagger/swagger.yaml'
+          
 
