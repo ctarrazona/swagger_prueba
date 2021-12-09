@@ -28,6 +28,6 @@ jobs:
         with: 
           lhs: './api/swagger/asd.yml'
           rhs: './api/swagger/swagger.yaml'
-          compare: true
+          
           
 
