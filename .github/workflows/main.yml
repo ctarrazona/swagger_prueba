@@ -26,7 +26,8 @@ jobs:
       - name: File Diff
         uses: tianhaoz95-actions/file-diff@v1.0.0
         with: 
-          lhs: './api/swagger/asd.yaml'
+          lhs: './api/swagger/asd.yml'
           rhs: './api/swagger/swagger.yaml'
+          compare: true
           
 
