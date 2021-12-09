@@ -23,3 +23,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: swagger-ui
+      - name: File Diff
+        uses: tianhaoz95-actions/file-diff@v1.0.0
+
